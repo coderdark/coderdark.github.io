@@ -1,3 +1,5 @@
+import {getImageUrl} from './utils/getImage.js';
+
 export default function App() {
     return <main className={'flex flex-col relative w-screen min-h-screen'}>
         <header
@@ -12,7 +14,8 @@ export default function App() {
             </div>
         </header>
         <section className="flex flex-col rounded-lg">
-            <div className="flex bg-[url('./src/assets/programming.jpg')] bg-center h-52 bg-cover justify-center items-center">
+            <div style={{backgroundImage: `url(${getImageUrl('programming.jpg')})`}}
+                 className={`flex bg-center h-52 bg-cover justify-center items-center`}>
                 Got To Love Tech!
             </div>
         </section>
